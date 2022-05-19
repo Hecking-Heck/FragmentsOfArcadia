@@ -1,12 +1,22 @@
 // FragmentsOfArcadia.cpp
+// Written by Aiden Morrison for https://aiden-morrison.com
+// Source on Github - https://github.com/Hecking-Heck/FragmentsOfArcadia
 
+// Includes
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
+
+// Using
 using namespace std;
+
+// Variables
+char name[50];
+
+// Init
 int main()
 {
-	char name[50];
+	// To begin we set the scene and then ask the player for their name, we store this here for use throughout the rest of the game
 	cout << "You awake to the muffled sounds of what seems to be an ongoing battle." << endl;
 	cout << "Looking around, you realise you are locked in a shabby prison cell." << endl;
 	cout << "Suddenly. A Voice!" << endl;
@@ -16,7 +26,7 @@ int main()
 	cout << "Well met, " << name << ". You no doubt will have heard by now, the red rock goblins are attacking the city." << endl;
 	cout << "In a few hours the war will be over and they will have taken what they have came for, as for us? who knows." << endl;
 
-	// Path One Choice One
+	// Path One, Choice One
 	int choiceOne_PathOne;
 	cout << "# What is your response?" << endl;
 	cout << "\t >> Enter '1' to show your anger." << endl;
@@ -33,13 +43,15 @@ int main()
 		break;
 	case 2: cout << "You talk about your worry toward the Red Rock Goblin attack, the other prisoner is anoyyed by this." << endl;
 		cout << "You need a strong will to break out of this place, perhaps my interest in you was misguided..." << endl;
+		cout << "Some moments of silence pass as the thunderings of war outside grow louder, the prisoner finally shakes his head." << endl;
+		cout << "No matter, I would rather not wait here to die, I have a way to break out of here. are you coming with me\nor shall I leave you for dead?" << endl;
 		break;
 	default : cout << "Try again..." << endl;
 		goto choiceOne_PathOneRetry;
 		break;
 	}
 
-	// Path One Choice Two
+	// Path One, Choice Two
 	int choiceOne_PathTwo;
 	cout << "# What is your response?" << endl;
 	cout << "\t >> Enter '1' to agree and break out of this prison." << endl;
@@ -62,5 +74,6 @@ int main()
 		break;
 	}
 
+	// The game ends here, we end with the return code '0' to mark the application as having exited successfully.
 	return 0;
 }
